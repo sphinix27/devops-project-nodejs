@@ -10,7 +10,7 @@ var Employee = new Schema({
     type: String
   },
   birthday: {
-    type: String
+    type: Date
   },
   email: {
     type: String

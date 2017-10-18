@@ -30,15 +30,15 @@ employeeRoutes.route('/employees').get(function (req, res) {
 });
 
 // Defined edit route
-// employeeRoutes.route('/employees/:id').get(function (req, res) {
-//   var id = req.params.id;
-//   Employee.findById(id, function (err, employee){
-//       res.json(employee);
-//   });
-// });
+employeeRoutes.route('/employees/:id').get(function (req, res) {
+  var id = req.params.id;
+  Employee.findById(id, function (err, employee){
+      res.json(employee);
+  });
+});
 
 //  Defined update route
-employeeRoutes.route('/employees/:id').post(function (req, res) {
+employeeRoutes.route('/employees/:id').put(function (req, res) {
   Employee.findById(req.params.id, function(err, employee) {
     if (!employee)
       return next(new Error('Could not load Document'));
@@ -63,7 +63,7 @@ employeeRoutes.route('/employees/:id').post(function (req, res) {
 });
 
 // Defined delete | remove | destroy route
-employeeRoutes.route('/employees/:id').get(function (req, res) {
+employeeRoutes.route('/employees/:id').delete(function (req, res) {
   Employee.findByIdAndRemove({_id: req.params.id}, function(err, employee){
         if(err) res.json(err);
         else res.json('Successfully removed');

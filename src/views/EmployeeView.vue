@@ -135,7 +135,7 @@ export default {
 
         updateEmployee(employee) {
             let uri = 'http://localhost:4000/api/employees/';
-            this.axios.post(uri+employee._id, employee)
+            this.axios.put(uri+employee._id, employee)
             .then( response => {
                 this.employee = response.data
             }).catch( error => {
@@ -146,7 +146,7 @@ export default {
 
         deleteEmployee(employee) {
             let uri = 'http://localhost:4000/api/employees/';
-            this.axios.get(uri+employee._id)
+            this.axios.delete(uri+employee._id)
             .then( response => {
                 let index = this.items.indexOf(employee)
                 this.items.splice(index, 1)
