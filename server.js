@@ -4,7 +4,7 @@ const express = require('express'),
       cors = require('cors'),
       mongoose = require('mongoose'),
       config = require('./config/DB'),
-      employeeRoutes = require('./expressRoutes/employeeRoutes');
+      employeeRoutes = require('./app/routes/employeeRoutes');
 
       mongoose.Promise = global.Promise;
       mongoose.connect(config.DB).then(
@@ -22,3 +22,5 @@ const express = require('express'),
       const server = app.listen(port, function(){
         console.log('Listening on port ' + port);
       });
+
+module.exports = server

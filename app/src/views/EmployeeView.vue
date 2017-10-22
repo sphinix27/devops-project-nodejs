@@ -43,21 +43,6 @@
                 </td>
             </template>
             </v-data-table>
-            <v-layout row justify-center>
-                <v-btn color="primary" dark @click.native.stop="dialog1 = true">Open Dialog</v-btn>
-
-                <v-dialog v-model="dialog1">
-                    <v-card>
-                        <v-card-title class="headline">Delete Employee</v-card-title>
-                        <v-card-text>Are you sure you want to delete the employee?</v-card-text>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn color="green darken-1" flat="flat" @click.native="dialog1 = false">Delete</v-btn>
-                            <v-btn color="green darken-1" flat="flat" @click.native="dialog1 = false">Cancel</v-btn>
-                        </v-card-actions>
-                    </v-card>
-                </v-dialog>
-            </v-layout>
         </v-card>
     </div>
 </template>

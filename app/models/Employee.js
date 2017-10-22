@@ -1,22 +1,27 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// Define collection and schema for Items
+// Define collection and schema for Employees
 var Employee = new Schema({
   name: {
-    type: String
+    type: String,
+    required: true
   },
   lastname: {
-    type: String
+    type: String,
+    required: true
   },
   birthday: {
-    type: Date
+    type: Date,
+    required: true
   },
   email: {
-    type: String
+    type: String,
+    required: true
   },
   ci: {
-    type: String
+    type: String,
+    required: true
   },
   phone: {
     type: String
@@ -26,6 +31,10 @@ var Employee = new Schema({
   },
   address: {
     type: String
+  },
+  created_by: {
+    type: Date,
+    default: Date.now
   }
 },{
     collection: 'employees'

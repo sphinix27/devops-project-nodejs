@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "mocha tests --timeout 10000"
   },
   "author": "",
   "license": "ISC",
@@ -16,10 +17,15 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "babel-runtime": "^6.25.0",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
     "css-loader": "^0.28.4",
     "file-loader": "^0.11.2",
     "lodash": "^4.17.4",
+    "mocha": "^4.0.1",
     "nodemon": "^1.11.0",
+    "sinon": "^4.0.1",
+    "sinon-mongoose": "^2.0.2",
     "vue": "^2.4.2",
     "vue-axios": "^2.0.2",
     "vue-loader": "^13.0.2",
