@@ -4,7 +4,7 @@ const express = require('express'),
       cors = require('cors'),
       mongoose = require('mongoose'),
       config = require('./config/DB'),
-      employeeRoutes = require('./app/routes/employeeRoutes');
+      employeeRoutes = require('./app/routes/EmployeeRoutes');
 
       mongoose.Promise = global.Promise;
       mongoose.connect(config.DB).then(

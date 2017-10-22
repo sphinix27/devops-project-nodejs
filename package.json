@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "mocha tests --timeout 10000"
+    "test": "mocha tests/**.js --timeout 10000 --reporter nyan",
+    "test-report": "mocha tests/**.js --timeout 10000 --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
@@ -23,9 +24,8 @@
     "file-loader": "^0.11.2",
     "lodash": "^4.17.4",
     "mocha": "^4.0.1",
+    "mochawesome": "^2.3.1",
     "nodemon": "^1.11.0",
-    "sinon": "^4.0.1",
-    "sinon-mongoose": "^2.0.2",
     "vue": "^2.4.2",
     "vue-axios": "^2.0.2",
     "vue-loader": "^13.0.2",
